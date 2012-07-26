@@ -1,0 +1,3 @@
+#!/bin/bash
+tar -cf $1 $2
+gzip -c $1 > $1.gz

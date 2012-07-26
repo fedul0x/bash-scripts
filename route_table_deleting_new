@@ -1,0 +1,20 @@
+фвв#!/bin/bash
+
+if route del -net 10.0.0.0 netmask 255.0.0.0 gw 192.168.0.1;
+ then echo "route del -net 10.0.0.0 netmask 255.0.0.0 gw 192.168.0.1 --- SUCCESS";
+ else echo "FAILED";
+fi
+if route del -host 192.168.149.1 gw 192.168.0.1; 
+ then echo "route del -host 192.168.149.1 gw 192.168.0.1 --- SUCCESS";
+ else echo "FAILED";
+fi
+if route del -host 195.98.64.65 gw 192.168.0.1;
+ then echo "route del -host 195.98.64.65 gw 192.168.0.1 --- SUCCESS";
+ else echo "FAILED";
+fi
+if route del -host 195.98.64.66 gw 192.168.0.1;
+ then echo "route del -host 195.98.64.66 gw 192.168.0.1";
+ else echo "FAILED"
+fi
+route del default
+ 

@@ -1,0 +1,1 @@
+for i in $(fls -rd /dev/sdb1|awk {'print $3'}|tr -d [:]); do icat -r -f fat /dev/sdb1 $i > /home/fedul/photo/$i.jpg;done

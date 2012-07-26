@@ -1,0 +1,20 @@
+#!/bin/bash
+
+if route add -net 10.0.0.0 netmask 255.0.0.0 gw 10.3.15.65;
+ then echo "route add -net 10.0.0.0 netmask 255.0.0.0 gw 10.3.15.65 --- SUCCESS";
+ else echo "FAILED";
+fi
+if route add -host 192.168.149.1 gw 10.3.15.65; 
+ then echo "route add -host 192.168.149.1 gw 10.3.15.65 --- SUCCESS";
+ else echo "FAILED";
+fi
+if route add -host 195.98.64.65 gw 10.3.15.65 ;
+ then echo "route add -host 195.98.64.65 gw 10.3.15.65 --- SUCCESS";
+ else echo "FAILED";
+fi
+if route add -host 195.98.64.66 gw 10.3.15.65;
+ then echo "route add -host 195.98.64.66 gw 10.3.15.65";
+ else echo "FAILED"
+fi
+route del default
+ 
